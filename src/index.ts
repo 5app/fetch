@@ -27,7 +27,7 @@ export async function fetchJSON(url: string, options: Options) {
 
 	const headers = {
 		Accept: 'application/json',
-		...options.headers,
+		...options?.headers,
 	};
 
 	try {
