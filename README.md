@@ -1,25 +1,12 @@
-# Package Template
+# Fetch
 
-[![Known Vulnerabilities](https://snyk.io/test/github/5app/package-template/badge.svg)](https://snyk.io/test/github/5app/package-template)
-[![CircleCI](https://circleci.com/gh/5app/package-template.svg?style=shield)](https://circleci.com/gh/5app/package-template)
+[![Known Vulnerabilities](https://snyk.io/test/github/5app/fetch/badge.svg)](https://snyk.io/test/github/5app/fetch)
+[![CircleCI](https://circleci.com/gh/5app/fetch.svg?style=shield)](https://circleci.com/gh/5app/fetch)
 
-This is a template for starting new JS projects at 5app.
+# Fetch utilities
 
-## What now
+```js
+import {fetchJSON} from '@5app/fetch';
 
-1. Run `npm init` to configure [./package.json](./package.json]).
-1. You also need to manually update [./package.json](./package.json]) for `name`, `version` and `description` and all repository links.
-1. Implement tests!
-1. Give https://github.com/orgs/5app/teams/ci write access to the repo.
-1. Replace this file with real information about your package.
-1. Write your code and commit/push.
-1. Configure in [Circle CI](https://app.circleci.com/projects/project-dashboard/github/5app/).
-
-### For packages to be posted to NPM
-
-1. Remove the setting `private: true` from [./package.json](./package.json]).
-   This protects accidentally publishing to _npm_. If you want to publish to npm then this will prevent it until removed.
-
-### Notes
-
-1. Changelog will be automatically populated during CI process.
+const respJSON = await fetchJSON('https://example.com/get.json');
+```

@@ -22,6 +22,7 @@ jobs:
         steps:
             - checkout
             - node/install-packages
+            - run: npm run build
             - run: npx semantic-release
 
 workflows:

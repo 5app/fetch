@@ -1,0 +1,12 @@
+{
+	"extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
+	"compilerOptions": {
+		"outDir": "dist",
+		"rootDir": "src",
+		"moduleResolution": "node",
+		"types": ["node"],
+		// Generate d.ts files
+		"declaration": true,
+	},
+	"include": ["src/**/*"]
+}
