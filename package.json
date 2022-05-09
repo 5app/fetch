@@ -1,0 +1,59 @@
+{
+	"name": "@5app/package-template",
+	"version": "1.2.2",
+	"private": true,
+	"description": "Description",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"prepare": "husky install",
+		"lint": "eslint ./",
+		"lint-fix": "npm run lint -- --fix",
+		"lint-diff": "LIST=`git diff-index --name-only HEAD | grep '.*\\.js$';`; if [ \"$LIST\" ]; then eslint $LIST; fi",
+		"precommit-msg": "echo 'Running pre-commit checks... (skip using --no-verify)'",
+		"test": "echo 'implement tests'"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/5app/package-template.git"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/5app/package-template/issues"
+	},
+	"homepage": "https://github.com/5app/package-template#readme",
+	"devDependencies": {
+		"@5app/semantic-release-config": "^1.0.0",
+		"@commitlint/cli": "^16.2.4",
+		"@commitlint/config-conventional": "^16.2.4",
+		"eslint": "^8.15.0",
+		"eslint-config-5app": "^0.16.4",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^8.0.0",
+		"prettier": "^2.6.2",
+		"pretty-quick": "^3.1.3",
+		"semantic-release": "^19.0.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		],
+		"rules": {
+			"subject-case": [
+				2,
+				"never",
+				[
+					"start-case",
+					"pascal-case"
+				]
+			]
+		}
+	},
+	"release": {
+		"extends": "@5app/semantic-release-config"
+	}
+}
