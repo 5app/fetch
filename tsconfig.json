@@ -5,8 +5,9 @@
 		"rootDir": "src",
 		"moduleResolution": "node",
 		"types": ["node"],
+		"lib": ["dom"],
 		// Generate d.ts files
-		"declaration": true,
+		"declaration": true
 	},
 	"include": ["src/**/*"]
 }
