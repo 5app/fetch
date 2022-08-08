@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/5app/fetch/compare/v1.0.1...v1.0.2) (2022-08-08)
+
+
+### Bug Fixes
+
+* **deps:** npm update ([0144a3e](https://github.com/5app/fetch/commit/0144a3ea141bf6fff1389143da17b5ff9f054608))
+
 ## [1.0.1](https://github.com/5app/fetch/compare/v1.0.0...v1.0.1) (2022-05-09)
 
 
