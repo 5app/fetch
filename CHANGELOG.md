@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/5app/fetch/compare/v1.0.2...v1.0.3) (2022-09-07)
+
+
+### Bug Fixes
+
+* **publish_github:** publish package to github ([#7](https://github.com/5app/fetch/issues/7)) ([3452004](https://github.com/5app/fetch/commit/34520046a8dafdb268fa5f25d9af89acb483c1bb))
+
 ## [1.0.2](https://github.com/5app/fetch/compare/v1.0.1...v1.0.2) (2022-08-08)
 
 ### Bug Fixes
