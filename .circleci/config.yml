@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
     node: circleci/node@5
+    release: fiveapp/release@0.0.3
 
 executors:
     default:
@@ -17,20 +18,15 @@ jobs:
             - run: npm run lint
             - run: npm test
 
-    release:
-        executor: default
-        steps:
-            - checkout
-            - node/install-packages
-            - run: npm run build
-            - run: npx semantic-release
-
 workflows:
     build:
         jobs:
             - test
-            - release:
-                  context: org-global
+            - release/npm_and_github:
+                  build_command: npm run build
+                  context:
+                      - org-global
+                      - github-release
                   requires:
                       - test
                   filters:
