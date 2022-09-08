@@ -15,7 +15,8 @@
 		"lint-fix": "npm run lint -- --fix",
 		"lint-diff": "LIST=`git diff-index --name-only HEAD | grep '.*\\.js$';`; if [ \"$LIST\" ]; then eslint $LIST; fi",
 		"precommit-msg": "echo 'Running pre-commit checks... (skip using --no-verify)'",
-		"test": "npm run build"
+		"spec": "npm run build",
+		"test": "npm run lint && npm run spec"
 	},
 	"repository": {
 		"type": "git",

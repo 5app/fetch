@@ -2,33 +2,19 @@ version: 2.1
 
 orbs:
     node: circleci/node@5
-    release: fiveapp/release@0.0.3
-
-executors:
-    default:
-        docker:
-            - image: cimg/node:lts
-
-jobs:
-    test:
-        executor: default
-        steps:
-            - checkout
-            - node/install-packages
-            - run: npm run lint
-            - run: npm test
+    release: fiveapp/release@0
 
 workflows:
     build:
         jobs:
-            - test
+            - node/test
             - release/npm_and_github:
                   build_command: npm run build
                   context:
                       - org-global
                       - github-release
                   requires:
-                      - test
+                      - node/test
                   filters:
                       branches:
                           only:
