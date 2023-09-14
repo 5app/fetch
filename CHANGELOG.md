@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/5app/fetch/compare/v1.0.3...v1.0.4) (2023-09-14)
+
+
+### Bug Fixes
+
+* **deps:** update types ([94633c1](https://github.com/5app/fetch/commit/94633c1091edfacbb44e4df224ad5e1f5c427225))
+
 ## [1.0.3](https://github.com/5app/fetch/compare/v1.0.2...v1.0.3) (2022-09-07)
 
 
